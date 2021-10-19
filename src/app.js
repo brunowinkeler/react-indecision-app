@@ -42,8 +42,16 @@ class Action extends React.Component {
 }
 
 class Options extends React.Component {
+
+  // Binding handleRemoveAll to access internal props
+  constructor(props) {
+    super(props);
+    this.handleRemoveAll = this.handleRemoveAll.bind(this);
+  }
+
   handleRemoveAll() {
-    alert('handleRemoveAll');
+    console.log(this.props.options);
+    // alert('handleRemoveAll');
   }
 
   render() {
